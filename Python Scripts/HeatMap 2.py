@@ -2,7 +2,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-data = pd.read_csv('cluster2JaccardSimilarity.txt', sep = "\t")
+data = pd.read_csv('cluster1JaccardSimilarity.txt', sep = "\t")
 print (data)
 x = data['D1'].unique().tolist()
 print(len(x))
@@ -16,9 +16,9 @@ print(len(x))
 #sns.heatmap(heatmap1_data)
 #sns.heatmap(heatmap1_data, cmap = 'Blues')
 #heatmap1_data.style.background_gradient(cmap='Blues')
-sns.heatmap(heatmap1_data, annot=True)
+sns.heatmap(heatmap1_data, annot=False,linewidth=5, vmin=0, vmax=1,cmap = 'Reds')
 #sns.heatmap(heatmap1_data, annot=True)
-ax = sns.heatmap(heatmap1_data, linewidth=5)
+#ax = sns.heatmap(heatmap1_data, linewidth=5, vmin=0, vmax=1,cmap = 'Blues')
 #fig, ax = plt.subplots(figsize=(10,10))
 #sns.heatmap(data.corr(), ax=ax)
 plt.show()
